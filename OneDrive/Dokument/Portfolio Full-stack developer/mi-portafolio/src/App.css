@@ -1,0 +1,32 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  background: url("/images/hero-bg.jpg") center/cover no-repeat;
+  color: rgb(145, 134, 134);
+  padding: 100px 0;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons .btn {
+  margin: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #343a40;
+  padding: 10px;
+}
