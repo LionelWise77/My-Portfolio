@@ -4,7 +4,7 @@ import styles from "../styles/Header.module.css"; // Importa el CSS Module
 
 function Header() {
   return (
-    <nav className={`navbar navbar-dark bg-dark ${styles.navbarCustom}`}>
+    <nav className={`navbar  ${styles.navbarCustom}`}>
       <div className="container">
         <Link className={`navbar-brand ${styles.brand}`} to="/">
           HOME

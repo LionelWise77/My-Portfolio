@@ -1,14 +1,117 @@
 .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Tamaño completo de la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 50px 0;
+  color: rgb(242, 241, 237); /* Texto blanco para contraste */
+  background: url("../assets/images/eagles.jpeg") no-repeat center center/cover;
+  opacity: 0.8; /* Ajusta la transparencia de la imagen */
 }
 
-.profilePic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+.profile-pic {
+  width: 150px; /* Ajusta el ancho */
+  height: 150px; /* Ajusta la altura */
+  object-fit: cover; /* Recorta la imagen sin deformarla */
+  border-radius: 50%; /* Para hacerla circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+}
+
+img {
+  width: 250px; /* Ajusta el ancho */
+  height: 500px; /* Ajusta la altura */
+  object-fit: cover; /* Recorta la imagen sin deformarla */
+  border-radius: 30%; /* Para hacerla circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .buttons {
   margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  color: #105618;
+}
+
+/* Títulos con efecto degradado */
+h1,
+.h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(135deg, #0b511c, #0c1511);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  line-height: 1.2; /* Ajusta el espacio entre las líneas */
+}
+
+/*buttons*/
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.primary {
+  background: linear-gradient(135deg, #222127, #504e5e);
+  color: white;
+}
+
+.secondary {
+  background: linear-gradient(135deg, #1a893f, #68856c);
+  color: white;
+}
+
+.dark {
+  background: linear-gradient(135deg, #333, #242805);
+  color: white;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  p {
+    font-size: 1.5rem;
+  }
+
+  h1,
+  .h1 {
+    font-size: 2.5rem;
+  }
 }

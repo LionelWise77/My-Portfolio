@@ -1,10 +1,25 @@
 .navbarCustom {
   border-bottom: 2px solid #ffcc00;
   padding: 10px 0;
+  background-color: #042407;
 }
 
 .brand {
   font-size: 1.5rem;
   font-weight: bold;
   color: #ffcc00 !important;
+}
+
+a {
+  border-bottom: 2px solid #ffcc00;
+  font-weight: bold;
+  color: #ffcc00 !important;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+a:hover {
+  color: #65c188 !important;
+  background-color: transparent;
 }

@@ -1,48 +1,6 @@
 /* General Styles */
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f8f9fa;
-}
-
-/* Hero Section */
-.hero {
-  background: url("/images/hero-bg.jpg") center/cover no-repeat;
-  color: white;
-  padding: 100px 0;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid white;
-  margin-bottom: 20px;
-}
-
-/* Projects Section */
-.projects {
-  background: url("/images/projects-bg.jpg") center/cover no-repeat;
-  padding: 60px 0;
-  color: white;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  backdrop-filter: blur(10px);
-  color: white;
-}
-
-/* Small Projects Section */
-.small-projects {
-  background: url("/images/small-projects-bg.jpg") center/cover no-repeat;
-  padding: 60px 0;
-  color: white;
-}
-
-.small-project-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  backdrop-filter: blur(10px);
-  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #aab2bb;
+  font-size: 1rem;
 }
