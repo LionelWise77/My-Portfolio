@@ -1,0 +1,12 @@
+.smallProjects {
+  padding: 40px 0;
+}
+
+.smallProjectCard {
+  border: 1px solid #ccc;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.smallProjectCard:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}

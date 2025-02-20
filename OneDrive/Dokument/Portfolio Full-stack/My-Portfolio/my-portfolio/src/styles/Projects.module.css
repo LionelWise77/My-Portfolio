@@ -1,0 +1,12 @@
+.projects {
+  padding: 40px 0;
+}
+
+.projectCard {
+  border: 1px solid #070404;
+  transition: transform 0.2s ease-in-out;
+}
+
+.projectCard:hover {
+  transform: scale(1.05);
+}
