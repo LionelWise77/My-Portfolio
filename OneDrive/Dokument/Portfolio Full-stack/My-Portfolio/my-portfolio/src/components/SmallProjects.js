@@ -1,42 +1,55 @@
 import React from "react";
 import styles from "../styles/SmallProjects.module.css"; // Importamos los estilos
+import hangmanImg from "../assets/images/hangmanGame.jpg";
+import calculatorImg from "../assets/images/calculator.webp";
+import alchemistImg from "../assets/images/footer.webp";
 
 function SmallProjects() {
+  const projects = [
+    {
+      title: "Hangman Game",
+      desc: "A simple Python Game.",
+      link: "https://github.com/LionelWise77/Hangman88",
+      img: hangmanImg,
+    },
+    {
+      title: "REACT Calculator",
+      desc: "A simple calculator built with React.",
+      link: "https://github.com/yourusername/weather-app",
+      img: calculatorImg,
+    },
+    {
+      title: "Alchemist Cave",
+      desc: "A page with BreatheWork techniques.",
+      link: "https://github.com/LionelWise77/PP1-The-Alchemist-Cave",
+      img: alchemistImg,
+    },
+  ];
+
   return (
     <section id="small-projects" className={styles.smallProjects}>
       <h2 className="text-center">Small Projects</h2>
-      <div className="container">
-        <div className="row">
-          {[
-            {
-              title: "To-Do List",
-              desc: "A simple task manager.",
-              link: "https://github.com/yourusername/todo-app",
-            },
-            {
-              title: "Weather App",
-              desc: "Fetches weather data using an API.",
-              link: "https://github.com/yourusername/weather-app",
-            },
-          ].map((project, index) => (
-            <div className="col-md-4" key={index}>
-              <div className={`card ${styles.smallProjectCard}`}>
-                <div className="card-body">
-                  <h6 className="card-title">{project.title}</h6>
-                  <p className="card-text">{project.desc}</p>
-                  <a
-                    href={project.link}
-                    className="btn btn-sm btn-outline-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
+      <div className={styles.projectsGrid}>
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className={styles.smallProjectCard}
+            style={{ backgroundImage: `url(${project.img})` }}
+          >
+            <div className={styles.overlay}>
+              <h6 className={styles.title}>{project.title}</h6>
+              <p className={styles.desc}>{project.desc}</p>
+              <a
+                href={project.link}
+                className={styles.btn}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

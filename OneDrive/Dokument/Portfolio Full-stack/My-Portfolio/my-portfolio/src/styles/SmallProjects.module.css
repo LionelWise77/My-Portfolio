@@ -1,12 +1,88 @@
+/* Fondo con un color moderno */
 .smallProjects {
-  padding: 40px 0;
+  background: linear-gradient(135deg, #083b1c, #cbd2cd);
+  color: white;
+  padding: 60px 20px;
+  min-height: 100vh; /* Para empujar el footer hacia abajo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Título llamativo */
+.smallProjects h2 {
+  font-size: 2.8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #ddd01a; /* Azul verdoso moderno */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Cards con estilo moderno */
 .smallProjectCard {
-  border: 1px solid #ccc;
-  transition: box-shadow 0.2s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .smallProjectCard:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Links dentro de las cards */
+.smallProjectCard a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.325);
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.smallProjectCard a:hover {
+  color: #ffa726;
+}
+
+.smallProjectCard h6 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.smallProjectCard p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #f5f2f2;
+}
+
+/* Footer abajo */
+.footer {
+  margin-top: auto;
+  width: 100%;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
 }

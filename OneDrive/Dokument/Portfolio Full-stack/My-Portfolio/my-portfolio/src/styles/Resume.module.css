@@ -1,35 +1,50 @@
+/* Fondo elegante con degradado */
 .resume {
-  background-color: #f8f9fa;
-  padding: 60px 20px;
+  background: linear-gradient(135deg, #414431, #b5be62);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
+  padding: 50px 20px;
 }
 
+/* Estilización del título */
 .resume h2 {
-  font-size: 2rem;
-  color: #333;
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-bottom: 15px;
+  letter-spacing: 1.5px;
 }
 
+/* Estilización del texto */
 .resume p {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1.5rem;
   margin-bottom: 20px;
-}
-
-.resume .btn {
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
-
-.resume .btn-primary {
-  background-color: #007bff;
-  border: none;
+  opacity: 0.8;
   color: white;
 }
 
-.resume .btn-primary:hover {
-  background-color: #0056b3;
+/* Estilo del botón */
+.button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Efecto hover */
+.button:hover {
+  background: #0f3513;
+  transform: scale(1.05);
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
 }
