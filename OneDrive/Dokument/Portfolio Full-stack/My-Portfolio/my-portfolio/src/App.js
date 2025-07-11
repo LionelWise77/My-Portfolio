@@ -7,6 +7,7 @@ import SmallProjects from "./components/SmallProjects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume";
+import AboutMe from "./components/AboutMe";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/small-projects" element={<SmallProjects />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<AboutMe />} />
       </Routes>
       <Footer />
     </Router>

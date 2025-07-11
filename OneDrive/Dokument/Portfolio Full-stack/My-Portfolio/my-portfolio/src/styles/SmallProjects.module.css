@@ -1,42 +1,37 @@
-/* Fondo con un color moderno */
 .smallProjects {
   background: linear-gradient(135deg, #083b1c, #cbd2cd);
   color: white;
   padding: 60px 20px;
-  min-height: 100vh; /* Para empujar el footer hacia abajo */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* Título llamativo */
 .smallProjects h2 {
   font-size: 2.8rem;
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  color: #ddd01a; /* Azul verdoso moderno */
+  font-weight: 700;
+  color: #ddd01a;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .projectsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 90%;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1100px;
 }
 
-/* Cards con estilo moderno */
 .smallProjectCard {
   background-size: cover;
   background-position: center;
   border-radius: 15px;
-  height: 250px;
-  display: flex;
-  align-items: flex-end;
+  height: 280px;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -44,40 +39,66 @@
 
 .smallProjectCard:hover {
   transform: scale(1.05);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
-}
-
-/* Links dentro de las cards */
-.smallProjectCard a {
-  color: #ffcc00;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.325);
-  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   text-align: center;
 }
 
-.smallProjectCard a:hover {
-  color: #ffa726;
-}
-
 .smallProjectCard h6 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .smallProjectCard p {
-  margin-top: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin-bottom: 15px;
   color: #f5f2f2;
 }
 
-/* Footer abajo */
+.btn {
+  background: linear-gradient(135deg, #1a893f, #68856c);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #14532d;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .smallProjects h2 {
+    font-size: 2.2rem;
+  }
+
+  .smallProjectCard h6 {
+    font-size: 1.3rem;
+  }
+
+  .smallProjectCard p {
+    font-size: 0.95rem;
+  }
+}
+
 .footer {
   margin-top: auto;
   width: 100%;

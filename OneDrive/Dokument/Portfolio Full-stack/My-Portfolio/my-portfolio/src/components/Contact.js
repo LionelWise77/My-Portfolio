@@ -7,9 +7,19 @@ function Contact() {
       <div className={styles.container}>
         <h2>Contact Me</h2>
         <form className={styles.contactForm}>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="4" required></textarea>
+          <label htmlFor="name">Name</label>
+          <input id="name" type="text" placeholder="Your Name" required />
+
+          <label htmlFor="email">Email</label>
+          <input id="email" type="email" placeholder="Your Email" required />
+
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            placeholder="Your Message"
+            rows="4"
+            required
+          ></textarea>
           <button type="submit">Send Message</button>
         </form>
         <div className={styles.contactInfo}>

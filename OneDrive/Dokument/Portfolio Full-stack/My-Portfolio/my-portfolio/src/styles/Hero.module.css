@@ -1,78 +1,73 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* Tamaño completo de la pantalla */
+  height: 100vh; /* Pantalla completa */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: rgb(242, 241, 237); /* Texto blanco para contraste */
-  background: url("../assets/images/eagles.jpeg") no-repeat center center/cover;
-  opacity: 0.8; /* Ajusta la transparencia de la imagen */
+  color: #f2f1ed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/images/eagles.jpeg") no-repeat center center/cover;
+  background-size: cover;
 }
 
-.profile-pic {
-  width: 150px; /* Ajusta el ancho */
-  height: 150px; /* Ajusta la altura */
-  object-fit: cover; /* Recorta la imagen sin deformarla */
-  border-radius: 50%; /* Para hacerla circular */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+.profilePic {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  border: 3px solid white;
 }
 
-img {
-  width: 250px; /* Ajusta el ancho */
-  height: 500px; /* Ajusta la altura */
-  object-fit: cover; /* Recorta la imagen sin deformarla */
-  border-radius: 30%; /* Para hacerla circular */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.buttons {
-  margin-top: 20px;
-  font-size: 1.5rem;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  letter-spacing: 0.5px;
-  line-height: 1.6;
-  color: #105618;
-}
-
-/* Títulos con efecto degradado */
-h1,
-.h1 {
+h1 {
   font-size: 3rem;
   font-family: "Playfair Display", serif;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
-  background: linear-gradient(135deg, #0b511c, #0c1511);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding-top: 20px;
   letter-spacing: 2px;
+  background: linear-gradient(135deg, #0b511c, #0c1511);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: whitesmoke;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-  line-height: 1.2; /* Ajusta el espacio entre las líneas */
+  margin-bottom: 10px;
 }
 
-/*buttons*/
+h2 {
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #f2f1ed;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+}
 
 .buttons {
   margin-top: 20px;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .button {
   padding: 12px 24px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   border: none;
@@ -100,18 +95,22 @@ h1,
 }
 
 .button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   filter: brightness(1.2);
 }
 
-/* Ajuste responsivo */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  p {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
     font-size: 1.5rem;
   }
 
-  h1,
-  .h1 {
-    font-size: 2.5rem;
+  .description {
+    font-size: 1rem;
+    padding: 0 20px;
   }
 }

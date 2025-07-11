@@ -20,7 +20,7 @@ function SmallProjects() {
     },
     {
       title: "Alchemist Cave",
-      desc: "A page with BreatheWork techniques.",
+      desc: "A HTML/CSS page with BreatheWork techniques.",
       link: "https://github.com/LionelWise77/PP1-The-Alchemist-Cave",
       img: alchemistImg,
     },
