@@ -24,6 +24,14 @@
   color: white;
 }
 
+.subtitle {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #f5f5dc;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
 .buttonContainer {
   display: flex;
   gap: 20px;
@@ -46,6 +54,7 @@
 .button:hover {
   background: #14532d;
   transform: scale(1.05);
+  box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffa726;
 }
 
 /* Responsive adjustments */
@@ -62,4 +71,19 @@
     font-size: 1rem;
     padding: 10px 15px;
   }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateResume {
+  animation: fadeSlideUp 1s ease-out;
 }
