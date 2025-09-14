@@ -3,6 +3,7 @@ import styles from "../styles/Projects.module.css";
 import HarmonizeImg from "../assets/images/CalenderView.webp";
 import yutoriSpaImg from "../assets/images/yutorispa.png";
 import FiFaQuizAppImg from "../assets/images/FiFaQuizAppImg.png";
+import dragonBallImg from "../assets/images/dragonball.png";
 
 function Projects() {
   const projects = [
@@ -12,7 +13,7 @@ function Projects() {
       img: yutoriSpaImg,
       tech: ["React", "Django", "Python", "PostgreSQL"],
       link: "https://github.com/LionelWise77/Yutori-PP4",
-      live: "https://yutorispa-4e43a431e62f.herokuapp.com/", // Add live link if deployed
+      live: "https://yutorispa-4e43a431e62f.herokuapp.com/",
     },
     {
       title: "Harmonize Calendar",
@@ -20,7 +21,7 @@ function Projects() {
       img: HarmonizeImg,
       tech: ["React", "Node.js", "CSS"],
       link: "https://github.com/LionelWise77/harmonize-frontend",
-      live: "https://harmonize-frontend-658a78db4f9b.herokuapp.com/", // Add live link if deployed
+      live: "https://harmonize-frontend-658a78db4f9b.herokuapp.com/",
     },
     {
       title: "FIFA Quiz App",
@@ -28,7 +29,16 @@ function Projects() {
       img: FiFaQuizAppImg,
       tech: ["JavaScript", "HTML", "CSS"],
       link: "https://github.com/LionelWise77/FIFA-World-Cup-Quiz",
-      live: "", // Add live link if deployed
+      live: "",
+    },
+    {
+      title: "Dragon Ball Fan Page",
+      desc: "An interactive fan page dedicated to Dragon Ball. Built with React, i18n, animations, and a clean responsive design.",
+      img: dragonBallImg,
+      tech: ["React", "i18next", "CSS"],
+      link: "https://github.com/LionelWise77/DragonBallFanPage",
+      deploy: "https://github.com/LionelWise77/DragonBall-React",
+      live: "https://dragon-ball-react-psi.vercel.app/",
     },
   ];
 

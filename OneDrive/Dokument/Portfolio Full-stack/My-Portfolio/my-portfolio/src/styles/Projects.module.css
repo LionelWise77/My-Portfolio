@@ -22,9 +22,9 @@
 
 .projectsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
 }
 
@@ -39,6 +39,11 @@
   align-items: flex-end;
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard.dragonball {
+  border: 2px solid #ff6600; /* aura naranja estilo DB */
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
 }
 
 .projectCard:hover {
@@ -122,6 +127,10 @@
 @media (max-width: 768px) {
   .projects h2 {
     font-size: 2.2rem;
+  }
+
+  .projectsContainer {
+    grid-template-columns: 1fr; /* En móvil, 1 columna */
   }
 
   .projectCard {
