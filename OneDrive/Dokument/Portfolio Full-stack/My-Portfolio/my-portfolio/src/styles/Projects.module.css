@@ -99,6 +99,13 @@
   flex-wrap: wrap;
 }
 
+.notice {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #cc0000;
+  font-weight: 500;
+}
+
 .button {
   background: linear-gradient(135deg, #222127, #504e5e);
   color: white;

@@ -72,6 +72,7 @@ function Projects() {
                 >
                   View on GitHub
                 </a>
+                {/* Only show Live Demo button if live link exists 
                 {project.live && (
                   <a
                     href={project.live}
@@ -82,6 +83,8 @@ function Projects() {
                     Live Demo
                   </a>
                 )}
+                  */}
+                <p className={styles.notice}>⚠️ Live demo coming soon!</p>
               </div>
             </div>
           </div>
