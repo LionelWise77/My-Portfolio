@@ -1,5 +1,5 @@
 .smallProjects {
-  background: linear-gradient(135deg, #083b1c, #cbd2cd);
+  background: linear-gradient(135deg, #083b1c, #1a3a1a);
   color: white;
   padding: 60px 20px;
   min-height: 100vh;
@@ -13,7 +13,7 @@
   font-size: 2.8rem;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: #ddd01a;
+  color: #f0c040;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 40px;
@@ -34,7 +34,9 @@
   height: 280px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .smallProjectCard:hover {
@@ -70,21 +72,24 @@
 }
 
 .btn {
-  background: linear-gradient(135deg, #1a893f, #68856c);
-  color: white;
-  padding: 8px 15px;
+  background-color: #1a3a1a;
+  color: #f0c040;
+  padding: 8px 18px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease, transform 0.3s ease;
+  border: 1px solid #f0c040;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .btn:hover {
-  background: #14532d;
+  background-color: #f0c040;
+  color: #1a3a1a;
   transform: scale(1.05);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .smallProjects h2 {
     font-size: 2.2rem;
@@ -97,13 +102,4 @@
   .smallProjectCard p {
     font-size: 0.95rem;
   }
-}
-
-.footer {
-  margin-top: auto;
-  width: 100%;
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
 }

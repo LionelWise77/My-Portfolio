@@ -3,20 +3,25 @@ import styles from "../styles/Resume.module.css";
 
 function Resume() {
   return (
-    <section id="resume" className={`${styles.resume} ${styles.animateResume}`}>
-      <h2>My Resume</h2>
-      <p className={styles.subtitle}>
-        Building bridges between code, creativity and purpose.
-      </p>
-
-      <div className={styles.buttonContainer}>
-        <a
-          href="/CV-FullStack-Definitive.pdf"
-          className={`btn btn-primary ${styles.button}`}
-          download
-        >
-          Download Resume
-        </a>
+    <section className={`${styles.resume} ${styles.animateResume}`}>
+      <div className={styles.content}>
+        <p className={styles.eyebrow}>Sebastian Perez Betancur</p>
+        <h2 className={styles.title}>Forged by discipline.</h2>
+        <h2 className={styles.titleAccent}>Driven by purpose.</h2>
+        <h2 className={styles.title}>Built to ship.</h2>
+        <p className={styles.subtitle}>
+          From the pitch to the terminal — every rep, every commit, every
+          campaign counts.
+        </p>
+        <div className={styles.buttonContainer}>
+          <a
+            href="/Sebastian_Perez_CV_EN_DEFINITIVO.docx"
+            className={styles.btnPrimary}
+            download
+          >
+            Download CV — English
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -1,78 +1,147 @@
 .resume {
-  background: linear-gradient(135deg, #414431, #b5be62);
-  color: white;
+  position: relative;
+  background-color: #0a1f0e;
+  background-image:
+    radial-gradient(
+      ellipse at 50% 50%,
+      rgba(11, 81, 28, 0.5) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 90% 10%,
+      rgba(240, 192, 64, 0.07) 0%,
+      transparent 50%
+    );
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   text-align: center;
-  padding: 50px 20px;
+  padding: 80px 20px;
+  overflow: hidden;
 }
 
-.resume h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-  letter-spacing: 1.5px;
+/* subtle grid texture */
+.resume::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(240, 192, 64, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240, 192, 64, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
 }
 
-.resume p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  opacity: 0.85;
-  color: white;
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
 }
 
+/* ── EYEBROW ── */
+.eyebrow {
+  font-family: "Space Grotesk", "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(240, 192, 64, 0.5);
+  margin-bottom: 28px;
+}
+
+/* ── TITLES ── */
+.title {
+  font-family: "Space Grotesk", "Poppins", sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.titleAccent {
+  font-family: "Space Grotesk", "Poppins", sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #f0c040;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* ── SUBTITLE ── */
 .subtitle {
-  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
   font-style: italic;
-  color: #f5f5dc;
-  opacity: 0.9;
-  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-top: 24px;
+  margin-bottom: 44px;
+  letter-spacing: 0.3px;
 }
 
+/* ── BUTTONS ── */
 .buttonContainer {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
 }
 
-.button {
-  background: linear-gradient(135deg, #1a893f, #68856c);
-  color: white;
-  padding: 12px 20px;
-  font-size: 1.2rem;
-  border-radius: 8px;
+.btnPrimary {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 13px 28px;
+  background-color: #f0c040;
+  color: #0a1f0e;
+  border-radius: 7px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  display: inline-block;
 }
 
-.button:hover {
-  background: #14532d;
-  transform: scale(1.05);
-  box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffa726;
+.btnPrimary:hover {
+  background-color: #ffd84d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(240, 192, 64, 0.3);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .resume h2 {
-    font-size: 2rem;
-  }
-
-  .resume p {
-    font-size: 1rem;
-  }
-
-  .button {
-    font-size: 1rem;
-    padding: 10px 15px;
-  }
+.btnOutline {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 13px 28px;
+  background-color: transparent;
+  color: #f0c040;
+  border: 1.5px solid #f0c040;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
 }
 
+.btnOutline:hover {
+  background-color: rgba(240, 192, 64, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ── ANIMATION ── */
 @keyframes fadeSlideUp {
   0% {
     opacity: 0;
@@ -85,5 +154,23 @@
 }
 
 .animateResume {
-  animation: fadeSlideUp 1s ease-out;
+  animation: fadeSlideUp 0.9s ease-out;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .title,
+  .titleAccent {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 0.92rem;
+  }
+
+  .btnPrimary,
+  .btnOutline {
+    font-size: 0.8rem;
+    padding: 11px 22px;
+  }
 }

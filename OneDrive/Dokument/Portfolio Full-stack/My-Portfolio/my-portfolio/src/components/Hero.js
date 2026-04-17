@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "../styles/Hero.module.css"; // Importamos los estilos
-import profilePic from "../assets/images/profilpic.jpg"; // corrige nombre de import si necesario
+import styles from "../styles/Hero.module.css";
+import profilePic from "../assets/images/profilpic.jpg";
 
 function Hero() {
   return (
@@ -11,26 +11,27 @@ function Hero() {
         alt="Sebastian Perez Betancur"
         className={styles.profilePic}
       />
-      <h1>Sebastián Perez Betancur</h1>
-      <h2>Fullstack Developer | React, Django & Node.js</h2>
-
-      <p className={styles.description}>
-        I build clean, responsive apps with modern technologies to create
-        meaningful digital solutions.
+      <h1 className={styles.name}>Sebastián Perez Betancur</h1>
+      <h2 className={styles.role}>Fullstack Developer · Growth Marketer</h2>
+      <p className={styles.stack}>
+        React · Django · Node.js · Customer.io · Figma
       </p>
-
+      <p className={styles.description}>
+        I build and ship digital products — from React apps and automation
+        workflows to marketing campaigns and client websites.
+      </p>
       <div className={styles.buttons}>
         <Link to="/projects" className={`${styles.button} ${styles.primary}`}>
           Projects
         </Link>
+        <Link to="/about" className={`${styles.button} ${styles.secondary}`}>
+          About Me
+        </Link>
         <Link
           to="/small-projects"
-          className={`${styles.button} ${styles.secondary}`}
+          className={`${styles.button} ${styles.dark}`}
         >
-          Small Projects
-        </Link>
-        <Link to="/about" className={`${styles.button} ${styles.primary}`}>
-          About Me
+          More
         </Link>
         <Link to="/contact" className={`${styles.button} ${styles.dark}`}>
           Contact

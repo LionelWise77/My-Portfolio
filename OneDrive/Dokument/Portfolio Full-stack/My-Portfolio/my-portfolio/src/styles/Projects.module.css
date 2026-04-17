@@ -1,154 +1,197 @@
 .projects {
-  background: linear-gradient(135deg, #d8d8de, #406f50);
+  background-color: #0a1f0e;
   color: white;
-  padding: 60px 20px;
+  padding: 60px 20px 80px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .projects h2 {
-  font-size: 3rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Space Grotesk", "Poppins", sans-serif;
+  font-size: 2.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #ffcc00;
-  text-shadow: 2px 2px 8px rgba(255, 204, 0, 0.5);
-  margin-bottom: 40px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  text-align: center;
+  width: 100%;
 }
 
+.subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  color: rgba(240, 192, 64, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+/* ── SECTION LABELS ── */
+.sectionLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #f0c040;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(240, 192, 64, 0.3);
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}
+
+/* ── GRID ── */
 .projectsContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 24px;
   max-width: 1000px;
   width: 100%;
 }
 
+/* ── CARD ── */
 .projectCard {
   position: relative;
-  height: 380px;
-  border-radius: 10px;
+  height: 360px;
+  border-radius: 12px;
   overflow: hidden;
   background-size: cover;
-  background-position: center;
+  background-position: center center; /* ← default */
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.projectCard.dragonball {
-  border: 2px solid #ff6600; /* aura naranja estilo DB */
-  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
+  border: 1px solid rgba(240, 192, 64, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  cursor: pointer;
 }
 
 .projectCard:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  border-color: rgba(240, 192, 64, 0.35);
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
 }
 
+/* ── CARD CONTENT ── */
 .projectContent {
   position: relative;
   z-index: 2;
-  text-align: center;
   padding: 20px;
-  color: white;
+  width: 100%;
+  text-align: left;
 }
 
 .projectContent h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-family: "Space Grotesk", "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
 }
 
 .projectContent p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: #f8f9fa;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 12px;
 }
 
+/* ── TECH BADGES ── */
 .techStack {
-  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
 }
 
 .techBadge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin: 0 5px 5px 0;
-  font-size: 0.8rem;
+  font-family: "Space Grotesk", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #f0c040;
+  background: rgba(240, 192, 64, 0.1);
+  border: 1px solid rgba(240, 192, 64, 0.25);
+  padding: 3px 8px;
+  border-radius: 4px;
 }
 
+/* ── BUTTONS ── */
 .buttons {
   display: flex;
-  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.notice {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #cc0000;
-  font-weight: 500;
-}
-
 .button {
-  background: linear-gradient(135deg, #222127, #504e5e);
-  color: white;
-  padding: 10px 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 7px 16px;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.3s ease;
+  border: 1.5px solid transparent;
+  transition: all 0.2s ease;
+  display: inline-block;
 }
 
-.button:hover {
-  background: #444;
-  transform: scale(1.05);
+.secondary {
+  background-color: transparent;
+  color: #f0c040;
+  border-color: #f0c040;
 }
 
-.footer {
-  margin-top: auto;
-  width: 100%;
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
+.secondary:hover {
+  background-color: rgba(240, 192, 64, 0.12);
+  transform: translateY(-1px);
 }
 
-/* Responsive adjustments */
+.notice {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.35);
+  font-style: italic;
+  padding: 6px 0;
+}
+
+/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .projects h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .projectsContainer {
-    grid-template-columns: 1fr; /* En móvil, 1 columna */
+    grid-template-columns: 1fr;
   }
 
   .projectCard {
-    height: 320px;
+    height: 300px;
   }
 
-  .projectContent h3 {
-    font-size: 1.2rem;
-  }
-
-  .projectContent p {
-    font-size: 0.95rem;
+  .sectionLabel {
+    padding-left: 10px;
   }
 }
